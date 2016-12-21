@@ -33,7 +33,7 @@ class Item
     @import_status = import_status
 
     @cost.to_f
-    receipt.item_list << self
+    receipt.total_items << self
 
     set_base_sales_tax
     set_import_tax
@@ -54,6 +54,14 @@ class Item
     else
       @import_tax = 0
     end
+  end
+
+  def total_tax
+    @base_sales_tax + @import_tax
+  end
+
+  def total_cost
+    @cost + @total_tax
   end
 
 end
