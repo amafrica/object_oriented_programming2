@@ -32,10 +32,10 @@ class Receipt
     end
 
     puts ""
-    puts "Total Sales Tax: #{tax_total}"
+    # puts "Total Sales Tax: #{tax_total}"
     puts "Total Sales Tax: #{'%.2f' % tax_total}"
 
-    puts "Total: #{total_cost}"
+    # puts "Total: #{total_cost}"
     puts "Total: #{'%.2f' % total_cost}"
   end
 
